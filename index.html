@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body bgcolor='#F9E9CD'>
+		<div id="gameTypeChooseField">
+			<table>
+				<tr>
+					<th colspan="2" id="choiceHeader">select game type:</th>
+				</tr>
+				<tr id = "choiceRow" onmousedown="choice(event.srcElement)">
+					<td id="set2Players">PLAY with а friend</td>	<td id="setAIPlayer">PLAY with computer</td>
+				</tr>
+			</table>
+		</div>
+		<div id='gameField'>
+			<style type="text/css">
+				#gameField, #gameTypeChooseField{
+					margin: 0 auto;
+					display: table;
+					text-align: center;
+					font-family: Consolas;
+					color: #FFF;
+				}
+				table{
+					width: 100%;
+					height: 100%;
+				}
+				td{
+					width: 33%;
+					height: 33%;
+					cursor: pointer;
+					transition: 0.2s;
+					background: #F1C7A7;
+					color: #FFF;
+				}
+				td:active{
+					background: #D19969;
+					color: #F1C7A7;
+				}
+				#choiceHeader{
+					background: #D19969;
+					width: 100%;
+				}
+				#set2Players{
+					height: 80%;
+					width: 50%;
+				}
+				#setAIPlayer{
+					height: 80%;
+					width: 50%;
+				}
+			</style>
+			<table onmousedown="MouseDown(event)">
+				<tr bgcolor='#F1C7A7'>
+					<td id="ceil0"></td>	<td id="ceil1"></td>	<td id="ceil2"></td>
+				</tr>
+				<tr bgcolor='#F1C7A7'>
+					<td id="ceil3"></td>	<td id="ceil4"></td>	<td id="ceil5"></td>
+				</tr>
+				<tr bgcolor='#F1C7A7'>
+					<td id="ceil6"></td>	<td id="ceil7"></td>	<td id="ceil8"></td>
+				</tr>
+			</table>
+		</div>
+		<script src='xo.js'></script>
+		
+	</body>
+</html>
